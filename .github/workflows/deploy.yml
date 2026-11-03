@@ -23,14 +23,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         # Шаг 2. Подготовить окружение GitHub Pages
-        - name: Setup Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
         # Шаг 3. Упаковать файлы сайта в артефакт (path: '.' = весь проект)
-        - name: Upload artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
         # Шаг 4. Опубликовать артефакт на GitHub Pages
-        - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
